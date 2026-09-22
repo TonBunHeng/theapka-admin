@@ -151,9 +151,11 @@ export function AdminLayout() {
           {/* Sidebar Header */}
           <div className="h-16 flex items-center justify-between px-4 border-b border-slate-800 shrink-0">
             <NavLink to="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded bg-brand-emerald-800 border border-brand-gold-400/50 flex items-center justify-center shadow-md shrink-0">
-                <span className="text-brand-gold-400 font-bold text-base">TK</span>
-              </div>
+              <img
+                src="/TK.jpeg"
+                alt="TheapKa"
+                className="w-9 h-9 rounded object-cover shadow-md shrink-0 border border-brand-gold-400/50"
+              />
               {(!isCollapsed || mobileMenuOpen) && (
                 <div className="flex flex-col">
                   <span className="text-sm font-bold text-white tracking-tight leading-tight">

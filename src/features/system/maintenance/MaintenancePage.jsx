@@ -511,9 +511,11 @@ export function MaintenancePage() {
                 {/* Simulated Screen Body */}
                 <div className="relative z-10 max-w-sm space-y-4">
                   {/* Brand Icon */}
-                  <div className="mx-auto w-14 h-14 rounded bg-brand-emerald-900 border border-brand-gold-400/40 flex items-center justify-center shadow-lg ring-4 ring-slate-800/80">
-                    <span className="text-brand-gold-400 font-bold text-xl">TK</span>
-                  </div>
+                  <img
+                    src="/TK.jpeg"
+                    alt="TheapKa"
+                    className="mx-auto w-14 h-14 rounded object-cover border border-brand-gold-400/40 shadow-lg ring-4 ring-slate-800/80"
+                  />
 
                   {/* Title */}
                   <div className="space-y-1">
