@@ -87,21 +87,12 @@ export function SettingsPage() {
         </div>
 
         <CardContent className="pt-6">
-          <form onSubmit={handleSubmit((d) => saveMutation.mutate(d))} className="space-y-6 max-w-xl">
+          <form id="settings-form" onSubmit={handleSubmit((d) => saveMutation.mutate(d))} className="space-y-6">
             {activeTab === 'general' && (
-              <div className="space-y-4">
+              <div className="space-y-4 max-w-xl">
                 <Input
                   label={t('system.settings.platform_name')}
                   {...register('platform_name')}
-                />
-
-                <Select
-                  label={t('system.settings.default_lang')}
-                  options={[
-                    { value: 'km', label: 'ភាសាខ្មែរ (Khmer - Default)' },
-                    { value: 'en', label: 'English' },
-                  ]}
-                  {...register('default_lang')}
                 />
 
                 <Input
@@ -114,11 +105,20 @@ export function SettingsPage() {
                   label="Official Contact Hotline"
                   {...register('contact_phone')}
                 />
+
+                <Select
+                  label={t('system.settings.default_lang')}
+                  options={[
+                    { value: 'km', label: 'ភាសាខ្មែរ (Khmer - Default)' },
+                    { value: 'en', label: 'English' },
+                  ]}
+                  {...register('default_lang')}
+                />
               </div>
             )}
 
             {activeTab === 'limits' && (
-              <div className="space-y-4">
+              <div className="space-y-4 max-w-xl">
                 <Input
                   label={t('system.settings.max_guests_free')}
                   type="number"
@@ -136,7 +136,7 @@ export function SettingsPage() {
             )}
 
             {activeTab === 'toggles' && (
-              <div className="space-y-4">
+              <div className="space-y-4 max-w-xl">
                 <div className="p-4 rounded border border-slate-200 bg-slate-50 space-y-3">
                   <label className="flex items-center justify-between text-xs font-semibold text-slate-800 cursor-pointer select-none">
                     <span>{t('system.settings.allow_khqr')}</span>
